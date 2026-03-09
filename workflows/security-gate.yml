@@ -1,12 +1,10 @@
 name: Security Gate
 
 on:
-  pull_request:
-    types: [opened, synchronize, reopened]
-    branches:
-      - dev
-      - stage
-      - prod
+  workflow_call:
+    secrets:
+      NPM_TOKEN:
+        required: true
 
 jobs:
   security-checks:

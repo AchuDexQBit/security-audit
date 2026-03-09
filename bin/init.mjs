@@ -8,7 +8,10 @@ import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const srcWorkflow = path.resolve(__dirname, "../workflows/security-gate.yml");
+const srcWorkflow = path.resolve(
+  __dirname,
+  "../workflows/security-gate-caller.yml",
+);
 const destDir = path.resolve(process.cwd(), ".github", "workflows");
 const destWorkflow = path.join(destDir, "security-gate.yml");
 
