@@ -1,0 +1,31 @@
+{
+  "name": "@AchuDexQBit/security-audit",
+  "version": "1.0.0",
+  "description": "Shared security audit tool and GitHub Actions workflow for Next.js projects",
+  "type": "module",
+  "main": "src/security-audit.mjs",
+  "bin": {
+    "security-audit": "./bin/run.mjs",
+    "security-audit-init": "./bin/init.mjs"
+  },
+  "files": [
+    "src/",
+    "bin/",
+    "workflows/"
+  ],
+  "scripts": {
+    "prepublishOnly": "echo 'Publishing @dexqbit/security-audit'"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AchuDexQBit/security-audit.git"
+  },
+  "keywords": ["security", "audit", "nextjs", "static-analysis"],
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=18"
+  }
+}
