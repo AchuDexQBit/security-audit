@@ -52,7 +52,7 @@ if (!fs.existsSync(npmrcPath)) {
 console.log("\nAdd these scripts to your project's package.json:");
 console.log(`   "npm-audit":      "npm audit --audit-level=moderate",`);
 console.log(
-  `   "security:audit": "node node_modules/@AchuDexQBit/security-audit/bin/run.mjs\n"`,
+  `   "security:audit": "node node_modules/@AchuDexQBit/security-audit/bin/run.mjs"\n`,
 );
 
 console.log("Done! Commit .github/workflows/security-gate.yml to your repo.\n");
