@@ -1,6 +1,6 @@
 {
   "name": "@AchuDexQBit/security-audit",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Shared security audit tool and GitHub Actions workflow for Next.js projects",
   "type": "module",
   "main": "src/security-audit.mjs",
