@@ -3,7 +3,7 @@ name: Publish Package
 on:
   push:
     tags:
-      - "v*" # triggers on v1.0.0, v1.2.3, etc.
+      - "v*"
 
 jobs:
   publish:
@@ -12,7 +12,7 @@ jobs:
 
     permissions:
       contents: read
-      packages: write # required to push to GitHub Packages
+      packages: write
 
     steps:
       - name: Checkout
@@ -26,6 +26,6 @@ jobs:
           scope: "@AchuDexQBit"
 
       - name: Publish
-        run: npm publish
+        run: npm publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }} # auto-provided by GitHub
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

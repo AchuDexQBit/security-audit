@@ -1,0 +1,17 @@
+# This file is copied into consumer projects by `npx security-audit-init`.
+# It calls the reusable workflow from the security-audit repo.
+# You never need to edit this file — all logic lives in the package repo.
+
+name: Security Gate
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - dev
+      - stage
+      - prod
+
+jobs:
+  security-checks:
+    uses: AchuDexQBit/security-audit/.github/workflows/security-gate.yml@master

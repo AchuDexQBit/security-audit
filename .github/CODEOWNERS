@@ -1,2 +1,2 @@
-security-audit.mjs @AchuDexQBit
+src/security-audit.mjs @AchuDexQBit
 .github/workflows/* @AchuDexQBit
