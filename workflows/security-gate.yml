@@ -5,6 +5,9 @@ name: Security Gate
 
 on:
   workflow_call:
+    secrets:
+      NPM_TOKEN:
+        required: true
 
 jobs:
   security-checks:
@@ -26,6 +29,11 @@ jobs:
         with:
           node-version: 18
           cache: npm
+
+      - name: Authenticate with GitHub Packages
+        run: |
+          echo "@AchuDexQBit:registry=https://npm.pkg.github.com" >> .npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN }}" >> .npmrc
 
       - name: Install dependencies
         run: npm ci
