@@ -15,5 +15,8 @@ on:
 jobs:
   security-checks:
     uses: AchuDexQBit/security-audit/.github/workflows/security-gate.yml@master
+    permissions:
+      contents: read
+      pull-requests: read
     secrets:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
