@@ -14,7 +14,7 @@ on:
 
 jobs:
   security-checks:
-    uses: DexQBit/security-audit/.github/workflows/security-gate.yml@master
+    uses: DexQBit/frontend-security-audit/.github/workflows/security-gate.yml@master
     permissions:
       contents: read
       pull-requests: read

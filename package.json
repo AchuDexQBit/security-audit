@@ -1,6 +1,6 @@
 {
   "name": "@DexQBit/frontend-security-audit",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "Shared security audit tool and GitHub Actions workflow for Next.js projects",
   "type": "module",
   "main": "src/security-audit.mjs",
@@ -14,7 +14,7 @@
     "workflows/"
   ],
   "scripts": {
-    "prepublishOnly": "echo 'Publishing @DexQBit/security-audit'"
+    "prepublishOnly": "echo 'Publishing @DexQBit/frontend-security-audit'"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com",
